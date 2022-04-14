@@ -37,6 +37,17 @@
   color: deeppink;
 }
 
+/* Spinner Loading */
+.spinner{
+    height: 95px !important;
+    width: 95px !important;
+}
+
+/* message */
+.msg{
+  color: green !important;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
 
 
 @media only screen and (max-width: 653px) and (min-width: 280px) {

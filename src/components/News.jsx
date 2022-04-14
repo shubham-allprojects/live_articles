@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import NewsItem from './NewsItem'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import Spinner from './Spinner'
 
 const News = (props) => {
 
@@ -11,7 +12,7 @@ const News = (props) => {
     const headline = `Top ${props.category} Headlines`
     const updateNews = async () => {
         let { country, category } = props;
-        const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=1&pageSize=10`;
+        const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=3e2c911e83f440b9a2bfacc3fa09f806&page=1&pageSize=10`;
         let data = await fetch(url);
         let parsedData = await data.json()
         setArticles(parsedData.articles)
@@ -26,7 +27,7 @@ const News = (props) => {
     // Get next 10 Articles.
     const fetchArticles = async () => {
         let { country, category } = props;
-        const data = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=${page}&pageSize=10`)
+        const data = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=3e2c911e83f440b9a2bfacc3fa09f806&page=${page}&pageSize=10`)
         let parsedData = await data.json()
         return parsedData.articles
     }
@@ -49,9 +50,10 @@ const News = (props) => {
             dataLength={articles.length}
             next={fetchMore}
             hasMore={noMore}
-            loader={<h4 className='text-center'>Loading.....</h4>}
+            // 
+            loader={<Spinner/>}
             endMessage={<h2 style={{ textAlign: "center" }}>
-                <span className='my-4'>You have seen it All !</span>
+                <span className='my-5 msg'>You have seen it All !</span>
             </h2>}
         >
             <div className='container my-3'>

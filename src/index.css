@@ -1,6 +1,6 @@
 /* Navbar Styles */
 .nav-link {
-  font-size: larger;
+  font-size: x-large;
 }
 
 .active {
@@ -23,11 +23,12 @@
 /* Card/NewsItem Styles */
 
 .card-img-top {
-  height: 200px;
+  height: 170px !important;
 }
 
 .card {
   height: 420px;
+  border: 2px solid black !important;
 }
 
 /* Heading Styles */
@@ -65,7 +66,7 @@
 
   /* Card/NewsItem Styles */
   .card {
-    height: 400px !important;
+    height: 370px !important;
   }
 
   .card-title {

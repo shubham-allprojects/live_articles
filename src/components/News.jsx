@@ -11,27 +11,23 @@ const News = (props) => {
 
     const headline = `Top ${props.category} Headlines`
     const updateNews = async () => {
-        let { country, category , apiKey} = props;
+        let { country, category, apiKey } = props;
         const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=1&pageSize=10`;
         let data = await fetch(url);
         let parsedData = await data.json()
         setArticles(parsedData.articles)
-        console.warn({apiKey})
     }
     useEffect(() => {
         updateNews()
         // eslint-disable-next-line 
     }, [])
 
-
-
     // Get next 10 Articles.
     const fetchArticles = async () => {
-        let { country, category , apiKey} = props;
+        let { country, category, apiKey } = props;
         const data = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=10`)
         let parsedData = await data.json()
-        console.warn({apiKey})
-        return parsedData.articles  
+        return parsedData.articles
     }
 
 
@@ -53,7 +49,7 @@ const News = (props) => {
             next={fetchMore}
             hasMore={noMore}
             // 
-            loader={<Spinner/>}
+            loader={<Spinner />}
             endMessage={<h2 style={{ textAlign: "center" }}>
                 <span className='my-5 msg'>You have seen it All !</span>
             </h2>}
@@ -70,7 +66,6 @@ const News = (props) => {
             </div>
         </InfiniteScroll>
     </>
-
     )
 }
 

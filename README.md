@@ -1,2 +1,2 @@
-Steps to Run Project
-Run command  >npm start
+Run command
+>npm start

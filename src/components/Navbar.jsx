@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import logo from './DefaultImages/logo.jpg'
+import logo from './DefaultImages/logo.jpg'  // news Logo Image on Navbar.
 
 const Navbar = () => {
     return (

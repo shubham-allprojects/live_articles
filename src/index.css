@@ -28,7 +28,6 @@
 
 .card {
   height: 420px;
-  border: 2px solid black !important;
 }
 
 /* Heading Styles */
@@ -50,7 +49,7 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
 }
 
-
+/* Media queries for small screens */
 @media only screen and (max-width: 653px) and (min-width: 280px) {
 
   /* Navbar Styles */

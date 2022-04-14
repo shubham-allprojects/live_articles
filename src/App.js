@@ -8,7 +8,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route exact path="/business" element={ <News key="business" country="in" category="business"/>} />
+        <Route exact path="/" element={ <News key="business" country="in" category="business"/>} />
         <Route exact path="/technology" element={ <News key="tehnology" country="in" category="technology"/>} />
       </Routes>
     </div>

@@ -11,11 +11,12 @@ const News = (props) => {
 
     const headline = `Top ${props.category} Headlines`
     const updateNews = async () => {
-        let { country, category } = props;
-        const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=3e2c911e83f440b9a2bfacc3fa09f806&page=1&pageSize=10`;
+        let { country, category , apiKey} = props;
+        const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=1&pageSize=10`;
         let data = await fetch(url);
         let parsedData = await data.json()
         setArticles(parsedData.articles)
+        console.warn({apiKey})
     }
     useEffect(() => {
         updateNews()
@@ -26,10 +27,11 @@ const News = (props) => {
 
     // Get next 10 Articles.
     const fetchArticles = async () => {
-        let { country, category } = props;
-        const data = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=3e2c911e83f440b9a2bfacc3fa09f806&page=${page}&pageSize=10`)
+        let { country, category , apiKey} = props;
+        const data = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}&page=${page}&pageSize=10`)
         let parsedData = await data.json()
-        return parsedData.articles
+        console.warn({apiKey})
+        return parsedData.articles  
     }
 
 

@@ -1,6 +1,6 @@
 /* Navbar Styles */
 .nav-link {
-  font-size:larger;
+  font-size: larger;
 }
 
 .active {
@@ -38,13 +38,13 @@
 }
 
 /* Spinner Loading */
-.spinner{
-    height: 95px !important;
-    width: 95px !important;
+.spinner {
+  height: 95px !important;
+  width: 95px !important;
 }
 
 /* message */
-.msg{
+.msg {
   color: green !important;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
 }

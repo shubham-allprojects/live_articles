@@ -1,2 +1,3 @@
-Run command
+Run commands
+>npm install
 >npm start

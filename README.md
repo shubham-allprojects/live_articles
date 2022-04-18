@@ -1,3 +1,3 @@
 Run commands
->npm install and
->npm start
+1)>npm install and
+2)>npm start

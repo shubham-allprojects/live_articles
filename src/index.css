@@ -23,11 +23,11 @@
 /* Card/NewsItem Styles */
 
 .card-img-top {
-  height: 170px !important;
+  height: 130px !important;
 }
 
 .card {
-  height: 420px;
+  height: 380px;
 }
 
 /* Heading Styles */
@@ -65,7 +65,7 @@
 
   /* Card/NewsItem Styles */
   .card {
-    height: 370px !important;
+    height: 340px !important;
   }
 
   .card-title {
@@ -76,4 +76,15 @@
     font-size: small;
   }
 
+}
+
+
+@media only screen and (max-width: 720px) and (min-width: 540px) {
+  .card-img-top {
+    height: 190px !important;
+  }
+  
+  .card {
+    height: 380px !important;
+  }
 }

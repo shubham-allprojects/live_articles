@@ -15,7 +15,7 @@ function App() {
         <Route exact path="/entertainment" element={<News key="entertainment" country="in" category="entertainment" />} />
         <Route exact path="/science" element={<News key="science" country="in" category="science" />} />
       </Routes>
-      </div>
+    </div>
   );
 }
 export default App;

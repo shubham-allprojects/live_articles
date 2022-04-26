@@ -1,0 +1,24 @@
+/* Navbar Styles */
+.nav-link {
+  font-size: larger;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+}
+
+.active {
+  color: red !important;
+  font-weight: bolder;
+}
+
+.navbar-toggler {
+  border-color: black !important;
+  border-width: 3px !important;
+}
+
+.navbar-brand {
+  height: 80px;
+  width: 145px;
+  border-radius: 40px;
+}

@@ -1,0 +1,39 @@
+/* Media queries for small screens */
+@media only screen and (max-width: 653px) and (min-width: 280px) {
+
+    /* Navbar Styles */
+    .nav-link {
+        font-size: medium;
+    }
+
+    .navbar-brand {
+        height: 70px;
+        width: 110px;
+        border-radius: 40px;
+    }
+
+    /* Card/NewsItem Styles */
+    .card {
+        height: 340px !important;
+    }
+
+    .card-title {
+        font-size: large;
+    }
+
+    .card-text {
+        font-size: small;
+    }
+
+}
+
+
+@media only screen and (max-width: 720px) and (min-width: 540px) {
+    .card-img-top {
+        height: 190px !important;
+    }
+
+    .card {
+        height: 380px !important;
+    }
+}

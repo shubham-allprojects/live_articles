@@ -4,7 +4,7 @@ import logo from './DefaultImages/logo.jpg'  // news Logo Image on Navbar.
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light p-2">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light p-2 fixed-top">
             <div className="container-fluid">
                 <img className="navbar-brand" src={logo} alt=".." />
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

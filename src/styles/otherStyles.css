@@ -1,0 +1,35 @@
+/* Card/NewsItem Styles */
+
+.card-img-top {
+    height: 130px !important;
+  }
+  
+  .card {
+    height: 380px;
+  }
+  
+  /* Heading Styles */
+  .headline {
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    color: deeppink;
+  }
+  
+  /* Spinner Loading */
+  .spinner {
+    height: 95px !important;
+    width: 95px !important;
+  }
+  
+  /* message */
+  .msg {
+    color: green !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+  }
+
+
+  .content{
+    margin-top: 100px !important;
+    margin-bottom: 70px !important;
+  }
+  

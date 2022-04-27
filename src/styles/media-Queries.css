@@ -14,7 +14,7 @@
 
     /* Card/NewsItem Styles */
     .card {
-        height: 230px !important;
+        height: 242px !important;
     }
 
     .card-img-top {
@@ -32,6 +32,7 @@
     /* Read more link style */
     .read-more {
         font-size: small !important;
+        margin-top: 3px !important;
     }
 
     /* Badge for showing time and date of news article */

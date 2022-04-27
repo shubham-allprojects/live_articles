@@ -6,11 +6,11 @@
 
 .nav-link:hover {
   font-weight: bold;
-  color: cyan !important;
+  color: orange !important;
 }
 
 .active {
-  color: orangered !important;
+  color: cyan !important;
   font-weight: bold;
 }
 

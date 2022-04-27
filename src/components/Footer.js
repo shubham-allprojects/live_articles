@@ -1,8 +1,9 @@
 import React from 'react'
+import { FaRegCopyright } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div className='footer fixed-bottom p-2 text-white text-center'>Designed by - xxxx Person</div>
+    <div className='footer fixed-bottom p-2 text-white text-center'><FaRegCopyright /> one company Pvt. Ltd.</div>
   )
 }
 

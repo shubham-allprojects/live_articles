@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import News from './components/News';
 
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/science" element={<News key="science" country="in" category="science" />} />
         </Routes>
       </div>
+      <Footer/>
     </>
   );
 }

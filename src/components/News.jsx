@@ -9,9 +9,6 @@ const News = (props) => {
     const [page, setPage] = useState(2)
     const [noMore, setNoMore] = useState(true)    // For infinite scroll Bar
 
-    // To change Headline Category wise e.g if we click on Technology, Headline will be "Top Technology Headlines"
-    const headline = `Top ${props.category} Headlines`
-
     // Function to Fetch First 8 articles from API
     const updateNews = async () => {
         let { country, category } = props;
@@ -52,17 +49,13 @@ const News = (props) => {
             hasMore={noMore}
             // Loader/Spinner image will be displayed e.g. Loading....  check Spinner Component.
             loader={<Spinner />}
-            endMessage={<h2 style={{ textAlign: "center" }}>
-                <span className='my-5 msg'>You have Seen it All !</span>
-            </h2>}
         >
-            <div className='container my-3'>
-                <h1 className='text-center my-3 headline'>{headline}</h1>
-                <div className='row d-flex justify-content-center'>
+            <div className='container'>
+                <div className='row d-flex justify-content-start'>
                     {/* Get data of each article from api and send required data as props to the NewsItem component  */}
                     {articles.map((article) => {
-                        return <div className='col-11 col-md-6 col-lg-4' key={article.url}>
-                            <NewsItem title={article.title ? article.title.slice(0, 65) + "..." : "No title Available"} Img={article.urlToImage} read_more={article.url} date={article.publishedAt} source={article.source.name} />
+                        return <div className='col-12 col-md-6 col-lg-4' key={article.url}>
+                            <NewsItem title={article.title ? article.title.slice(0, 63) + ".." : "No title Available"} Img={article.urlToImage} read_more={article.url} date={article.publishedAt} source={article.source.name} />
                         </div>
                     })}
                 </div>

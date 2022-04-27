@@ -1,19 +1,26 @@
 /* Card/NewsItem Styles */
-
 .card-img-top {
-  height: 146px !important;
+  height: 140px !important;
 }
 
 .card {
-  height: 322px;
+  height: 267px;
 }
 
-/* Heading Styles */
-.headline {
-  text-transform: capitalize;
-  font-family: 'Times New Roman', Times, serif;
-  color: darkblue;
+/* Badge for showing time and date of news article */
+.badge {
+  font-size: x-small !important;
 }
+
+/* Read more link style */
+.read-more:hover {
+  color: orangered !important;
+}
+
+.read-more {
+  font-size: small !important;
+}
+
 
 /* Spinner Loading */
 .spinner {
@@ -21,14 +28,14 @@
   width: 95px !important;
 }
 
-/* message */
-.msg {
-  color: green !important;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+/* Main parent div of all.  See App.js   */
+.content {
+  margin-top: 68px !important;
+  margin-bottom: 70px !important;
 }
 
-
-.content {
-  margin-top: 100px !important;
-  margin-bottom: 100px !important;
+/* Footer styles */
+.footer {
+  background-color: rgba(0, 0, 0, 0.873);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

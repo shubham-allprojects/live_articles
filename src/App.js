@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/science" element={<News key="science" country="in" category="science" />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

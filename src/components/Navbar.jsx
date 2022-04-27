@@ -1,10 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import logo from './DefaultImages/logo.jpg'  // news Logo Image on Navbar.
+import logo from './DefaultImages/logo.jpg'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light p-2 fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark p-1 fixed-top">
             <div className="container-fluid">
                 <img className="navbar-brand" src={logo} alt=".." />
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -7,7 +7,7 @@ const NewsItem = (props) => {
   return (
     <>
       {/* Display Each component in Card */}
-      <div className="card shadow mt-md-3 mt-2">
+      <div className="card shadow mt-md-3 mt-3">
         <span className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">Source:{source}</span>
         <div className='text-center'><img src={Img ? Img : defaultImage} className="card-img-top" alt="..." /></div>
         <div className="card-body">

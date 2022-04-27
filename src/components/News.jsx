@@ -55,7 +55,7 @@ const News = (props) => {
                     {/* Get data of each article from api and send required data as props to the NewsItem component  */}
                     {articles.map((article) => {
                         return <div className='col-12 col-md-6 col-lg-4' key={article.url}>
-                            <NewsItem title={article.title ? article.title.slice(0, 60) + ".." : "No title Available"} Img={article.urlToImage} read_more={article.url} date={article.publishedAt} source={article.source.name} />
+                            <NewsItem title={article.title ? article.title.slice(0, 64) + ".." : "No title Available"} Img={article.urlToImage} read_more={article.url} date={article.publishedAt} source={article.source.name} />
                         </div>
                     })}
                 </div>

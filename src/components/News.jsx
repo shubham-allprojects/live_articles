@@ -9,10 +9,10 @@ const News = (props) => {
     const [page, setPage] = useState(2)
     const [noMore, setNoMore] = useState(true)    // For infinite scroll Bar
 
-    // Function to Fetch First 8 articles from API
+    // Function to Fetch First 10 articles from API
     const updateNews = async () => {
         let { country, category } = props;
-        const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=aefcd8d8971e45d39b955c0e5736d7d4&page=1&pageSize=8`;
+        const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=be8a5dd01a42415b98abdbfa2e693f29&page=1&pageSize=10`;
         let data = await fetch(url);
         let parsedData = await data.json()
         setArticles(parsedData.articles)
@@ -22,10 +22,10 @@ const News = (props) => {
         // eslint-disable-next-line 
     }, [])
 
-    // Fetch next 8 Articles.
+    // Fetch next 10 Articles.
     const fetchArticles = async () => {
         let { country, category } = props;
-        const data = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=aefcd8d8971e45d39b955c0e5736d7d4&page=${page}&pageSize=8`)
+        const data = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=be8a5dd01a42415b98abdbfa2e693f29&page=${page}&pageSize=10`)
         let parsedData = await data.json()
         return parsedData.articles
     }
@@ -36,7 +36,7 @@ const News = (props) => {
         setTimeout(() => {
             setArticles([...articles, ...articlesFromApi]);
         }, 1000);
-        if (articlesFromApi.length === 0 || articlesFromApi.length < 8) {
+        if (articlesFromApi.length === 0 || articlesFromApi.length < 10) {
             setNoMore(false)
         }
         setPage(page + 1)

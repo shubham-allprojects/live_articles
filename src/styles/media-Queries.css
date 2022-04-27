@@ -14,11 +14,15 @@
 
     /* Card/NewsItem Styles */
     .card {
-        height: 340px !important;
+        height: 290px !important;
     }
 
+    .card-img-top {
+        height: 130px !important;
+      }
+
     .card-title {
-        font-size: large;
+        font-size: small;
     }
 
     .card-text {
@@ -34,6 +38,7 @@
     }
 
     .card {
-        height: 380px !important;
+        height: 335px !important;
+        width: 100% !important;
     }
 }

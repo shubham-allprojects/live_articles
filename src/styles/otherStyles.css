@@ -1,18 +1,18 @@
 /* Card/NewsItem Styles */
 
 .card-img-top {
-  height: 130px !important;
+  height: 146px !important;
 }
 
 .card {
-  height: 380px;
+  height: 322px;
 }
 
 /* Heading Styles */
 .headline {
   text-transform: capitalize;
   font-family: 'Times New Roman', Times, serif;
-  color: deeppink;
+  color: darkblue;
 }
 
 /* Spinner Loading */

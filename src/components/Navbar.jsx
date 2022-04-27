@@ -1,14 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from './DefaultImages/logo.jpg'
+import { VscThreeBars } from 'react-icons/vsc'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark p-1 fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-1 fixed-top">
             <div className="container-fluid">
                 <img className="navbar-brand" src={logo} alt=".." />
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <span className=""><VscThreeBars /></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">

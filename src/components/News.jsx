@@ -9,10 +9,10 @@ const News = (props) => {
   const [page, setPage] = useState(2);
   const [noMore, setNoMore] = useState(true); // For infinite scroll Bar
 
-  // Function to Fetch First 10 articles from API
+  // Function to Fetch First 12 articles from API
   const updateNews = async () => {
     let { country, category } = props;
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=60f82c8e1067470392c94d5482afb9b4&page=1&pageSize=10`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=60f82c8e1067470392c94d5482afb9b4&page=1&pageSize=12`;
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(parsedData.articles);
@@ -22,11 +22,11 @@ const News = (props) => {
     // eslint-disable-next-line
   }, []);
 
-  // Fetch next 10 Articles.
+  // Fetch next 12 Articles.
   const fetchArticles = async () => {
     let { country, category } = props;
     const data = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=60f82c8e1067470392c94d5482afb9b4&page=${page}&pageSize=10`
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=60f82c8e1067470392c94d5482afb9b4&page=${page}&pageSize=12`
     );
     let parsedData = await data.json();
     return parsedData.articles;
@@ -38,7 +38,7 @@ const News = (props) => {
     setTimeout(() => {
       setArticles([...articles, ...articlesFromApi]);
     }, 1000);
-    if (articlesFromApi.length === 0 || articlesFromApi.length < 10) {
+    if (articlesFromApi.length === 0 || articlesFromApi.length < 12) {
       setNoMore(false);
     }
     setPage(page + 1);
@@ -58,7 +58,7 @@ const News = (props) => {
             {/* Get data of each article from api and send required data as props to the NewsItem component  */}
             {articles.map((article) => {
               return (
-                <div className="col-10 col-md-4 col-lg-3" key={article.url}>
+                <div className="col-11 col-md-4 col-lg-3" key={article.url}>
                   <NewsItem
                     title={
                       article.title

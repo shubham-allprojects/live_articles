@@ -1,5 +1,4 @@
 /* Media queries for small screens */
-
 @media only screen and (max-width: 653px) and (min-width: 280px) {
 
     /* Navbar Styles */
@@ -7,6 +6,7 @@
         font-size: x-small;
     }
 
+    /* News Logo Images Styles */
     .navbar-brand {
         height: 44px;
         width: 48px;
@@ -18,22 +18,25 @@
         height: 224px !important;
     }
 
+    /* Justify content center for small screens */
     .justify-content-start {
         justify-content: center !important;
     }
 
+    /* Image styles */
     .card-img-top {
         height: 130px !important;
     }
 
+    /* Article title */
     .card-title {
         font-size: 10px !important;
     }
 
     /* Read more link style */
     .read-more {
-        font-size:  8px !important;
-        margin-top: 0.54rem !important;
+        font-size: 9px !important;
+        margin-top: 0.537rem !important;
     }
 
     /* Badge for showing time and date of news article */

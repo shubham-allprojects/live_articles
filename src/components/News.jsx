@@ -12,7 +12,7 @@ const News = (props) => {
   // Function to Fetch First 10 articles from API
   const updateNews = async () => {
     let { country, category } = props;
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=3412d67c15524e18863da47e768e6e71&page=1&pageSize=10`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=60f82c8e1067470392c94d5482afb9b4&page=1&pageSize=10`;
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(parsedData.articles);
@@ -26,7 +26,7 @@ const News = (props) => {
   const fetchArticles = async () => {
     let { country, category } = props;
     const data = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=3412d67c15524e18863da47e768e6e71&page=${page}&pageSize=10`
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=60f82c8e1067470392c94d5482afb9b4&page=${page}&pageSize=10`
     );
     let parsedData = await data.json();
     return parsedData.articles;

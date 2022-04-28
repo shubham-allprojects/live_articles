@@ -41,3 +41,8 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: lawngreen !important;
 }
+
+/* For Avoiding Extra verticle Scroll Bar On Screen */
+.infinite-scroll-component {
+  overflow: hidden !important;
+}

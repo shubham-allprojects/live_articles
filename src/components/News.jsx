@@ -10,10 +10,10 @@ const News = (props) => {
   const [noMore, setNoMore] = useState(true); // For infinite scroll Bar
   const heading = `Top - ${props.category} News`
 
-  // Function to Fetch First 12 articles from API
+  // Function to Fetch First 15 articles from API
   const updateNews = async () => {
     let { country, category } = props;
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=1&pageSize=12`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=1&pageSize=15`;
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(parsedData.articles);
@@ -23,11 +23,11 @@ const News = (props) => {
     // eslint-disable-next-line
   }, []);
 
-  // Fetch next 12 Articles.
+  // Fetch next 15 Articles.
   const fetchArticles = async () => {
     let { country, category } = props;
     const data = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=${page}&pageSize=12`
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=${page}&pageSize=15`
     );
     let parsedData = await data.json();
     return parsedData.articles;
@@ -39,14 +39,14 @@ const News = (props) => {
     setTimeout(() => {
       setArticles([...articles, ...articlesFromApi]);
     }, 1000);
-    if (articlesFromApi.length === 0 || articlesFromApi.length < 12) {
+    if (articlesFromApi.length === 0 || articlesFromApi.length < 15) {
       setNoMore(false);
     }
     setPage(page + 1);
   };
 
   return (
-    <>
+    <div>
       {/* Infinite Scroll Bar */}
       <InfiniteScroll
         dataLength={articles.length}
@@ -65,7 +65,7 @@ const News = (props) => {
                   <NewsItem
                     title={
                       article.title
-                        ? article.title.slice(0, 48) + ".."
+                        ? article.title.slice(0, 44) + ".."
                         : "No title Available"
                     }
                     Img={article.urlToImage}
@@ -79,7 +79,7 @@ const News = (props) => {
           </div>
         </div>
       </InfiniteScroll>
-    </>
+    </div>
   );
 };
 

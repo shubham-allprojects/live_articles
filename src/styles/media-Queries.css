@@ -57,6 +57,7 @@
 
 /* Media query for Surface Duo screen */
 @media only screen and (max-width: 720px) and (min-width: 540px) {
+
     .card-img-top {
         height: 190px !important;
     }
@@ -64,6 +65,7 @@
     .card {
         height: 289px !important;
     }
+
 }
 
 /* Media queries for medium screens */

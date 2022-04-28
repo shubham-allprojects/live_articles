@@ -4,7 +4,7 @@
 }
 
 .card {
-  height: 267px;
+  height: 277px;
 }
 
 /* Badge for showing time and date of news article */
@@ -18,7 +18,8 @@
 }
 
 .read-more {
-  font-size: medium !important;
+  font-size: small !important;
+  margin-top: 0.2rem !important;
 }
 
 

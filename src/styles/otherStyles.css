@@ -25,14 +25,14 @@
 
 /* Spinner Loading */
 .spinner {
-  height: 95px !important;
-  width: 95px !important;
+  height: 70px !important;
+  width: 70px !important;
 }
 
 /* Main parent div of all.  See App.js */
 .content {
   margin-top: 64px !important;
-  margin-bottom: 70px !important;
+  margin-bottom: 54px !important;
 }
 
 /* Footer styles */

@@ -52,6 +52,13 @@
     /* Main parent div of all.  See App.js */
     .content {
         margin-top: 54px !important;
+        margin-bottom: 36px !important;
+    }
+
+    /* Spinner Loading */
+    .spinner {
+        height: 35px !important;
+        width: 35px !important;
     }
 }
 
@@ -66,12 +73,28 @@
         height: 289px !important;
     }
 
+    .content {
+        margin-bottom: 46px !important;
+    }
+
+    /* Spinner Loading */
+    .spinner {
+        height: 50px !important;
+        width: 50px !important;
+    }
+
 }
 
 /* Media queries for medium screens */
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
     .card {
         height: 240px !important;
+    }
+
+    /* Spinner Loading */
+    .spinner {
+        height: 45px !important;
+        width: 45px !important;
     }
 }
 
@@ -81,6 +104,10 @@
     /* Card/NewsItem Styles */
     .card-img-top {
         height: 125px !important;
+    }
+
+    .card {
+        height: 224px !important;
     }
 
     .card-title {
@@ -96,5 +123,15 @@
     .read-more {
         font-size: 8.5px !important;
         margin-top: 0.5rem !important;
+    }
+
+    .content {
+        margin-bottom: 50px !important;
+    }
+
+    /* Spinner Loading */
+    .spinner {
+        height: 55px !important;
+        width: 55px !important;
     }
 }

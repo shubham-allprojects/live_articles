@@ -13,7 +13,7 @@ const News = (props) => {
   // Function to Fetch First 15 articles from API
   const updateNews = async () => {
     let { country, category } = props;
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=1&pageSize=15`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=45ff24ff7b414dccafa74c8237e5b6d9&page=1&pageSize=15`;
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(parsedData.articles);
@@ -27,7 +27,7 @@ const News = (props) => {
   const fetchArticles = async () => {
     let { country, category } = props;
     const data = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=${page}&pageSize=15`
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=45ff24ff7b414dccafa74c8237e5b6d9&page=${page}&pageSize=15`
     );
     let parsedData = await data.json();
     return parsedData.articles;
@@ -55,7 +55,7 @@ const News = (props) => {
         // Loader/Spinner image will be displayed e.g. Loading....  check Spinner Component.
         loader={<Spinner />}
       >
-        <div className="container">
+        <div className="container pb-4">
           <h2 className="text-capitalize text-center py-md-1 pt-1" style={{ "color": "purple" }}>{heading}</h2>
           <div className="row d-flex justify-content-start">
             {/* Get data of each article from api and send required data as props to the NewsItem component  */}

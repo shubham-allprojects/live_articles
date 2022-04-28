@@ -15,7 +15,7 @@
 
     /* Card/NewsItem Styles */
     .card {
-        height: 224px !important;
+        height: 216px !important;
     }
 
     /* Justify content center for small screens */
@@ -35,7 +35,7 @@
 
     /* Read more link style */
     .read-more {
-        font-size: 9px !important;
+        font-size: 8.5px !important;
         margin-top: 0.537rem !important;
     }
 
@@ -69,7 +69,7 @@
 /* Media queries for medium screens */
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
     .card {
-        height: 250px !important;
+        height: 240px !important;
     }
 }
 
@@ -79,10 +79,6 @@
     /* Card/NewsItem Styles */
     .card-img-top {
         height: 125px !important;
-    }
-
-    .card {
-        height: 251px;
     }
 
     .card-title {
@@ -96,7 +92,7 @@
 
     /* Read more link style */
     .read-more {
-        font-size: 8px !important;
+        font-size: 8.5px !important;
         margin-top: 0.5rem !important;
     }
 }

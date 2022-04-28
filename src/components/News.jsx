@@ -8,11 +8,12 @@ const News = (props) => {
   const [articles, setArticles] = useState([]); // news articles in the API
   const [page, setPage] = useState(2);
   const [noMore, setNoMore] = useState(true); // For infinite scroll Bar
+  const heading = `Top - ${props.category} News`
 
   // Function to Fetch First 12 articles from API
   const updateNews = async () => {
     let { country, category } = props;
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=60f82c8e1067470392c94d5482afb9b4&page=1&pageSize=12`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=1&pageSize=12`;
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(parsedData.articles);
@@ -26,7 +27,7 @@ const News = (props) => {
   const fetchArticles = async () => {
     let { country, category } = props;
     const data = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=60f82c8e1067470392c94d5482afb9b4&page=${page}&pageSize=12`
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=01da2a93a2634f2093f493581a18ded6&page=${page}&pageSize=12`
     );
     let parsedData = await data.json();
     return parsedData.articles;
@@ -43,6 +44,7 @@ const News = (props) => {
     }
     setPage(page + 1);
   };
+
   return (
     <>
       {/* Infinite Scroll Bar */}
@@ -54,15 +56,16 @@ const News = (props) => {
         loader={<Spinner />}
       >
         <div className="container">
+          <h2 className="text-capitalize text-center py-md-1 pt-1" style={{ "color": "purple" }}>{heading}</h2>
           <div className="row d-flex justify-content-start">
             {/* Get data of each article from api and send required data as props to the NewsItem component  */}
             {articles.map((article) => {
               return (
-                <div className="col-11 col-md-4 col-lg-3" key={article.url}>
+                <div className="col-10 col-md-4 col-lg-3" key={article.url}>
                   <NewsItem
                     title={
                       article.title
-                        ? article.title.slice(0, 60) + ".."
+                        ? article.title.slice(0, 48) + ".."
                         : "No title Available"
                     }
                     Img={article.urlToImage}
